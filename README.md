@@ -122,7 +122,12 @@ chmod -R 777 storage/
 - phpMyAdminを開く
  ※ **IP・ポート番号は [`.env`](./.env) の `IP`・`PORT_PHPMYADMIN` を参照**
   - <http://127.0.0.1:8080> （デフォルト設定のURL）  
-    VSCodeの[Docker拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)が入っている場合、対象コンテナの「Open in Browser」でも開けます。  
+    VSCodeの[Docker拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)が入っている場合、対象コンテナの「Open in Browser」でも開けます。
+- phpMyAdminからMySQLへ接続できない場合
+```bash
+docker compose down
+docker compose up -d
+```
 
 ### SQLクライアント
 
