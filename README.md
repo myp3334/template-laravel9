@@ -96,7 +96,8 @@ composer install
 
 `composer install` 実行後に「`Exception`」が出ていると失敗しているので  
 [root/vendor/](./root/vendor/)ディレクトリを削除して、再実行してみましょう。  
-「`successfully`」が出ていれば成功です。
+~~「`successfully`」が出ていれば成功です。~~
+<span style="color: red; ">vendor/autoload.php があればインストール完了</span>
 
 #### Laravel初期設定
 
@@ -113,11 +114,13 @@ chmod -R 777 storage/
 
 ### 確認
 
-- WEB ※ **IP・ポート番号は [`.env`](./.env) の `IP`・`PORT_WEB` を参照**
+- WEBを開く
+  ※ **IP・ポート番号は [`.env`](./.env) の `IP`・`PORT_WEB` を参照**
   - <http://127.0.0.1:80/> （デフォルト設定のURL）  
     [routes/web.php](./root/routes/web.php)のURI「`'/'`」の実行結果が画面に表示されます。  
     VSCodeの[Docker拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)が入っている場合、対象コンテナの「Open in Browser」でも開けます。  
-- phpMyAdmin ※ **IP・ポート番号は [`.env`](./.env) の `IP`・`PORT_PHPMYADMIN` を参照**
+- phpMyAdminを開く
+ ※ **IP・ポート番号は [`.env`](./.env) の `IP`・`PORT_PHPMYADMIN` を参照**
   - <http://127.0.0.1:8080> （デフォルト設定のURL）  
     VSCodeの[Docker拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)が入っている場合、対象コンテナの「Open in Browser」でも開けます。  
 
