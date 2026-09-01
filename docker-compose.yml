@@ -39,7 +39,7 @@ services:
     ports:
       - "${IP}:${PORT_PHPMYADMIN}:80"
     environment:
-      - "PMA_HOST=${DB_HOST_NAME}" # db -> hostname
+      - "PMA_HOST=db" # db -> hostname
       - "PMA_USER=root"
       - "PMA_PASSWORD=${DB_ROOT_PASSWORD}" # db -> environment -> MYSQL_ROOT_PASSWORD
       - "TZ=Asia/Tokyo"
